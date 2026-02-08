@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5-A Inc. — Terms of Service</title>
+  <meta name="description" content="5-A Inc. Terms of Service (Group Chat Rules disguised as legalese)" />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#101826;
+      --text:#e7edf6;
+      --muted:#a9b5c7;
+      --line:#1f2b3d;
+      --accent:#7aa7ff;
+      --warn:#ffcc66;
+      --danger:#ff6b6b;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 10% 0%, #12223a 0%, transparent 60%),
+                  radial-gradient(1200px 700px at 90% 0%, #1a1a3d 0%, transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      padding:48px 20px 18px;
+      border-bottom:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(16,24,38,.9), rgba(16,24,38,.35));
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+    .wrap{max-width:960px; margin:0 auto}
+    h1{
+      margin:0 0 8px;
+      font-size: clamp(24px, 4vw, 34px);
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size: 14px;
+    }
+    main{padding:26px 20px 60px}
+    .card{
+      background: linear-gradient(180deg, rgba(16,24,38,.92), rgba(16,24,38,.75));
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 18px;
+      margin: 14px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      color: #0b0f14;
+      background: var(--warn);
+      border-radius:999px;
+      padding:6px 10px;
+      font-weight:700;
+      letter-spacing:.2px;
+      margin-bottom:10px;
+    }
+    .toc{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:12px;
+    }
+    .toc a{
+      display:block;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background: rgba(255,255,255,.03);
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    h3{
+      margin: 16px 0 8px;
+      font-size: 15px;
+      color: var(--text);
+    }
+    p, li{color: var(--muted)}
+    ul{padding-left: 18px}
+    code{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      padding: 2px 6px;
+      border-radius: 8px;
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      font-size: 12.5px;
+    }
+    .notice{
+      border-left: 4px solid var(--warn);
+      padding: 10px 12px;
+      background: rgba(255,204,102,.08);
+      border-radius: 12px;
+    }
+    .danger{
+      border-left: 4px solid var(--danger);
+      background: rgba(255,107,107,.08);
+    }
+    footer{
+      border-top:1px solid var(--line);
+      padding: 20px;
+      color: var(--muted);
+    }
+    .small{font-size:12.5px}
+    .sig{
+      margin-top:12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{background: rgba(255,255,255,.06)}
+    .pill{
+      display:inline-block;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color: var(--muted);
+      font-size:12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>5-A Inc. — Terms of Service</h1>
+      <p class="sub">
+        Effective Date: <span id="effectiveDate"></span> · Applies to: the “5-A Inc.” Group Chat (“Service”)
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <span class="badge">READ THIS (for real)</span>
+      <div class="notice">
+        <strong>Not Actual Legal Terms.</strong>
+        <p class="small">
+          This page is written to <em>look</em> like a legally binding Terms of Service, but it is
+          primarily a stylized set of community rules for the 5-A Inc. group chat. It is not intended as legal advice,
+          and it is not a formal contract in any “lawyer in court” way. It’s just how we keep the chat sane.
+        </p>
+      </div>
+
+      <h2>Table of Contents</h2>
+      <div class="toc">
+        <a href="#acceptance">1. Acceptance of These Terms</a>
+        <a href="#eligibility">2. Eligibility & Access</a>
+        <a href="#conduct">3. Acceptable Use (Behavior Rules)</a>
+        <a href="#spam">4. Anti-Spam Policy (Zero Fun Allowed for Spammers)</a>
+        <a href="#content">5. Content Rules</a>
+        <a href="#privacy">6. Privacy & Screenshot Policy</a>
+        <a href="#moderation">7. Moderation & Enforcement</a>
+        <a href="#penalties">8. Penalties</a>
+        <a href="#appeals">9. Appeals (aka “I’m Not Guilty”)</a>
+        <a href="#changes">10. Changes to These Terms</a>
+        <a href="#contact">11. Contact</a>
+      </div>
+    </section>
+
+    <section id="acceptance" class="card">
+      <h2>1. Acceptance of These Terms</h2>
+      <p>
+        By reading, joining, lurking, posting, reacting, replying, quoting, or otherwise interacting with the 5-A Inc.
+        group chat (the “<strong>Service</strong>”), you agree to comply with these Terms of Service (“<strong>Terms</strong>”).
+      </p>
+      <p class="small">
+        If you do not agree, your remedy is simple and ancient: do not use the Service.
+      </p>
+    </section>
+
+    <section id="eligibility" class="card">
+      <h2>2. Eligibility & Access</h2>
+      <p>
+        Access to the Service is granted at the sole and dramatic discretion of 5-A Inc. moderators (“<strong>Mods</strong>”).
+        Mods may remove access at any time for any reason related to chat health, safety, or vibes.
+      </p>
+      <h3>2.1 Account Responsibility</h3>
+      <ul>
+        <li>You are responsible for what you post from your account/device.</li>
+        <li>“My cousin took my phone” is not a magical shield.</li>
+      </ul>
+    </section>
+
+    <section id="conduct" class="card">
+      <h2>3. Acceptable Use (Behavior Rules)</h2>
+      <p>
+        You agree to use the Service like a normal person in a shared room with other normal people.
+        Specifically, you will not:
+      </p>
+      <ul>
+        <li>Harass, threaten, or repeatedly target users.</li>
+        <li>Use slurs, hate speech, or dehumanizing language.</li>
+        <li>Start fights on purpose, bait arguments, or “farm” reactions.</li>
+        <li>Share explicit sexual content, especially involving minors (instant ban, no exceptions).</li>
+        <li>Encourage self-harm, violence, or illegal activity.</li>
+        <li>Impersonate Mods, members, or “official” accounts.</li>
+      </ul>
+      <h3>3.1 Respect the Room</h3>
+    </section>
+
+    <section id="spam" class="card">
+      <h2>4. Anti-Spam Policy (Zero Fun Allowed for Spammers)</h2>
+      <p>
+        Spamming is prohibited. “Spamming” includes, but is not limited to:
+      </p>
+      <ul>
+        <li>Sending repeated messages rapidly to flood the chat.</li>
+        <li>Copy/pasting the same text, emojis, or images repeatedly.</li>
+        <li>Chain messages, “send this to 10 people,” or similar nonsense.</li>
+        <li>Unsolicited advertisements, self-promo dumps, or “join my server” blasts.</li>
+        <li>Bot-like behavior or automated posting.</li>
+      </ul>
+      <div class="notice danger">
+        <strong>Spam is a fast-track enforcement category.</strong>
+        <p class="small">
+          The Service may apply immediate restrictions (mute/kick/ban) without warning if spam is clear.
+        </p>
+      </div>
+      <h3>4.1 Reasonable Posting</h3>
+      <ul>
+        <li>If you have 8 thoughts, you can put them in one message. Revolutionary, I know.</li>
+        <li>Use <code>@mentions</code> sparingly; mass pings are treated like spam.</li>
+      </ul>
+    </section>
+
+    <section id="content" class="card">
+      <h2>5. Content Rules</h2>
+      <h3>5.1 NSFW / Gore / Shock Content</h3>
+      <ul>
+        <li>No pornographic content.</li>
+        <li>No graphic gore, animal cruelty, or shock content.</li>
+        <li>No posting real violence for laughs.</li>
+      </ul>
+
+      <h3>5.2 Personal Information (Doxxing)</h3>
+      <ul>
+        <li>Do not share anyone’s private info: full names, addresses, phone numbers, school details, IPs, etc.</li>
+        <li>Do not “hint” private info or encourage others to dig it up.</li>
+      </ul>
+
+      <h3>5.3 Illegal / Risky Content</h3>
+      <ul>
+        <li>No sharing malware, phishing links, or instructions intended to harm others’ devices/accounts.</li>
+        <li>No scamming, fraud, or “free nitro” type stuff.</li>
+      </ul>
+
+      <h3>5.4 Copyright & Credits</h3>
+      <ul>
+        <li>Don’t repost others’ work and claim it’s yours.</li>
+        <li>Crediting is good. Permission is better.</li>
+      </ul>
+    </section>
+
+    <section id="privacy" class="card">
+      <h2>6. Privacy & Screenshot Policy</h2>
+      <p>
+        The Service is not private, but it is also not a public “content farm.” Use basic respect.
+      </p>
+      <ul>
+        <li>Do not screenshot messages to start drama elsewhere.</li>
+        <li>Do not share screenshots containing private info.</li>
+        <li>If you want to quote someone outside the chat, ask first (unless it’s clearly harmless).</li>
+      </ul>
+      <p class="small">
+        Mods may request deletion of posts/screenshots that cause harm or expose private information.
+      </p>
+    </section>
+
+    <section id="moderation" class="card">
+      <h2>7. Moderation & Enforcement</h2>
+      <p>
+        Mods may interpret and enforce these Terms to keep the Service usable. Mods may:
+      </p>
+      <ul>
+        <li>Remove messages (where platform features allow).</li>
+        <li>Warn, mute, kick, restrict, or ban users.</li>
+        <li>Set slowmode, limit media, or lock channels temporarily.</li>
+      </ul>
+      <h3>7.1 “We Were Joking” Clause</h3>
+      <p class="small">
+        If the impact is harmful, “it was a joke” does not automatically make it okay.
+      </p>
+    </section>
+
+    <section id="penalties" class="card">
+      <h2>8. Penalties</h2>
+      <p>
+        Penalties vary based on severity, repetition, intent, and whether you’re being weird about it.
+        Typical escalation may include:
+      </p>
+      <ol>
+        <li>Friendly warning</li>
+        <li>Formal warning</li>
+        <li>Temporary mute/restriction</li>
+        <li>Kick</li>
+        <li>Temporary ban</li>
+        <li>Permanent ban (aka “The Door”)</li>
+      </ol>
+      <p class="small">
+        Some violations can skip steps and go straight to a ban (e.g., hate speech, doxxing, explicit content involving minors, credible threats).
+      </p>
+    </section>
+
+    <section id="appeals" class="card">
+      <h2>9. Appeals (aka “I’m Not Guilty”)</h2>
+      <p>
+        If you believe a moderation action was incorrect, you may appeal by contacting a Mod calmly.
+      </p>
+      <ul>
+        <li>Explain what happened, briefly.</li>
+        <li>Don’t spam Mods (that makes it worse).</li>
+        <li>Harassing Mods about a decision may result in extended penalties.</li>
+      </ul>
+    </section>
+
+    <section id="changes" class="card">
+      <h2>10. Changes to These Terms</h2>
+      <p>
+        5-A Inc. may update these Terms when needed (new chaos drops, new rules appear).
+        Continued use of the Service after changes indicates acceptance of the updated Terms.
+      </p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>11. Contact</h2>
+      <p>
+        For questions, appeals, or reports, contact a moderator in the group chat.
+      </p>
+
+      <div class="sig">
+        <span class="pill">Document ID: 5A-TOS-CHAT-001</span>
+        <button class="btn" type="button" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quick “Plain English” Summary</h2>
+      <ul>
+        <li>Don’t spam.</li>
+        <li>Don’t be hateful or creepy.</li>
+        <li>Don’t doxx people.</li>
+        <li>Don’t post NSFW/gore.</li>
+        <li>Mods can mute/kick/ban to keep things normal.</li>
+      </ul>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap small">
+      © <span id="year"></span> 5-A Incorperated. All Nemrut's reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Set dates automatically
+    const now = new Date();
+    document.getElementById("year").textContent = now.getFullYear();
+    document.getElementById("effectiveDate").textContent =
+      now.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+  </script>
+</body>
+  </html>
