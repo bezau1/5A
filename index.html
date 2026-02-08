@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5-A Inc. — Official Site</title>
+
+<style>
+:root{
+  --bg:#0b0f14;
+  --card:#121826;
+  --accent:#5fa8ff;
+  --text:#e8eef8;
+  --muted:#aab6c9;
+  --line:#1f2738;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:radial-gradient(1200px 600px at 20% 0%, #142442 0%, transparent 60%), var(--bg);
+  color:var(--text);
+}
+
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+
+header{
+  border-bottom:1px solid var(--line);
+  background:#0f1420dd;
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+}
+
+.nav{
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{font-weight:900;font-size:20px}
+
+.hero{
+  text-align:center;
+  padding:100px 0;
+}
+
+.hero h1{
+  font-size:clamp(36px,6vw,64px);
+  margin:0 0 16px;
+}
+
+.hero p{
+  color:var(--muted);
+  max-width:600px;
+  margin:auto auto 32px;
+  font-size:18px;
+}
+
+.btn{
+  display:inline-block;
+  padding:16px 28px;
+  border-radius:12px;
+  background:var(--accent);
+  color:#000;
+  font-weight:800;
+  font-size:18px;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:20px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+}
+
+/* CAPTCHA MODAL */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+
+.box{
+  width:min(700px, 95%);
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.box header{
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  background:#111726;
+  font-weight:800;
+}
+
+.box main{
+  padding:16px;
+  text-align:center;
+}
+
+.box img{
+  width:100%;
+  border-radius:12px;
+  margin:12px 0;
+}
+
+.actions{
+  padding:14px;
+  border-top:1px solid var(--line);
+  text-align:right;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">5-A Inc.</div>
+    <a href="https://nubertislife.com/5A/tos" style="color:var(--muted)">Terms</a>
+  </div>
+</header>
+
+<main class="wrap hero">
+  <h1>Welcome to 5-A Inc.</h1>
+  <p>Coordination, projects, and group chat infrastructure for the modern era.</p>
+  <button class="btn" onclick="openCaptcha()">Join 5-A Inc.</button>
+</main>
+
+<footer>
+  © 5-A Inc. · <a href="https://nubertislife.com/5A/tos" style="color:var(--muted)">Terms of Service</a>
+</footer>
+
+<!-- CAPTCHA -->
+
+<div class="modal" id="captcha">
+  <div class="box">
+    <header>Verification Required</header>
+    <main>
+      <strong>Preserve the exquisite piece of art, Nemrut</strong>
+      <img src="nemrut.png" alt="Nemrut">
+      <p style="color:var(--muted)">Click yes to continue.</p>
+    </main>
+    <div class="actions">
+      <button class="btn" onclick="finishJoin()">Yes</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openCaptcha(){
+  document.getElementById("captcha").style.display="flex";
+}
+
+function finishJoin(){
+  window.location.href="https://enka.k12.tr";
+}
+</script>
+
+</body>
+</html>
